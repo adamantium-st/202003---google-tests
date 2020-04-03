@@ -1,11 +1,16 @@
-#ifndef FIBTEST_H
-#define FIBTEST_H
+#ifndef FIBO_H
+#define FIBO_H
 
+#include <iostream>
 
-class fibTest
+using namespace std;
+
+class Fibo
 {
 public:
-    fibTest();
+    Fibo();
+    int a, b, c;
+    int generate(int);
 };
 
-#endif // FIBTEST_H
+#endif // FIBO_H
