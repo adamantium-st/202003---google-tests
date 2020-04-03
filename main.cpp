@@ -1,6 +1,9 @@
-#include "tst_fibottst.h"
-
+#include "tst_maxminvalues.h"
+#include "fibo.h"
 #include <gtest/gtest.h>
+
+
+Fibo Fibo01;
 
 int main(int argc, char *argv[])
 {
