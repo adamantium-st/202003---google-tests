@@ -1,15 +1,30 @@
-#ifndef TST_FIBOTTST_H
-#define TST_FIBOTTST_H
-
+#ifndef TST_MAXMINVALUES_H
+#define TST_MAXMINVALUES_H
+#include "fibo.h"
 #include <gtest/gtest.h>
 #include <gmock/gmock-matchers.h>
 
 using namespace testing;
 
-TEST(testGoogleFibo, fibotTst)
+class fibo : public Test
 {
-    EXPECT_EQ(1, 1);
-    ASSERT_THAT(0, Eq(0));
+public:
+    Fibo my_generate;
+};
+
+TEST_F(fibo, oneValue1)
+{
+    EXPECT_EQ(my_generate.generate(0), 0);
 }
 
-#endif // TST_FIBOTTST_H
+TEST_F(fibo, oneValue2)
+{
+    EXPECT_EQ(my_generate.generate(1), 1);
+}
+
+
+TEST_F(fibo, oneValue3)
+{
+    EXPECT_EQ(my_generate.generate(3), 1);
+}
+#endif // TST_MAXMINVALUES_H
